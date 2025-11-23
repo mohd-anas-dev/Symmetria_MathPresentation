@@ -1,0 +1,70 @@
+.Footer {
+    width: 100%;
+    min-height: 5vh;
+}
+
+.FooterContainer {
+
+    width: 100%;
+    min-height: 5vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em 0.2em;
+}
+
+.LeftFooterContainerEnd {
+    width: 10%;
+    white-space: nowrap;
+
+    
+    h1 {
+        font-family: "Archivo", sans-serif;
+        font-size: 14px;
+        color: #c7c7c7;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.MiddleFooterContainerEnd {
+
+    h1 {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-family: "Archivo", sans-serif;
+        font-size: 18px;
+        color:black;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        h2 {
+            font-family: "Archivo", sans-serif;
+            font-size: 14px;
+            color: black;
+            font-weight: 400;
+            text-transform: uppercase;
+
+        }
+    }
+}
+
+.RightFooterContainerEnd {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+
+    h1 {
+        font-family: "Archivo", sans-serif;
+        font-size: 14px;
+        color: black;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+
+}

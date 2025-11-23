@@ -1,0 +1,172 @@
+.NavBar {
+    width: 100%;
+    min-height: 5vh;
+    font-family: "Archivo", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    z-index: 10;
+}
+
+.NavBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25em 2em;
+
+    .LeftNavbar {
+        width: 100px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    /* .MiddleNavBar {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.85em;
+            text-transform: uppercase;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+    } */
+
+
+    .RightNavBar {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5em;
+            text-transform: uppercase;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            svg{
+                height: 14px;
+                width: 14px;
+            }
+        }
+
+    }
+
+    .MiddleNavBar {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.85em;
+        text-transform: uppercase;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        padding: 4px 0;
+    }
+    
+    a span {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    a::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+    
+    a:hover span {
+        transform: translateY(-110%);
+    }
+    
+    a:hover::before {
+        transform: translateY(-83%);
+        color: #6d7070;
+    }
+}
+
+/* Active state styling */
+.MiddleNavBar a.active {
+    color: black;
+    font-weight: 400;
+}
+
+/* Optional: Add underline on active */
+/* .MiddleNavBar a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+} */
+}
+
+
+.Clicked{
+    position: relative;
+    display: inline-block;
+    color:black;
+    transition: all 300ms ease 0s;
+    outline: none;
+}
+
+.Clicked:hover{
+    color: black;
+}
+
+
+.Clicked::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1.5px;
+    transition: width ease 300ms;
+    transform-origin:  left;
+    background-color: black;
+}
+
+.Clicked:hover:after{
+    width: 100%;
+}
+
+.Clicked.active{
+    color:black;
+}
+.Clicked.active::after{
+    /* width: 100%; */
+}
+.Clicked::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1.5px;
+    background-color: #c7c7c7; /* light gray */
+}

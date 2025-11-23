@@ -1,0 +1,1106 @@
+.GraphTheory {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.GraphTheoryContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Introduction Section */
+.IntroductionGraphTheory {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 3em;
+}
+
+.IntroductionGraphTheoryContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopIntroductionGraphTheory {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.LeftTopIntroductionGraphTheory {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+
+
+
+    ul{
+        padding-left: 50px;
+        font-family: "Archivo", sans-serif;
+        font-size: 19px;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+
+    }
+}
+
+.LeftTopIntroductionGraphTheory h1 {
+    position: relative;
+    font-family: "Archivo", sans-serif;
+    font-size: 50px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: left;
+}
+
+.LeftTopIntroductionGraphTheory p {
+    font-family: "Archivo", sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.LeftTopIntroductionGraphTheory h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    width: 100%;
+    /* text-transform: uppercase; */
+    font-weight: 300;
+    text-align: justify;
+    padding-left: 50px;
+}
+
+.LeftTopIntroductionGraphTheory h2 .thenSpan {
+    width: 100%;
+    font-weight: 20px;
+    padding-left: 100px;
+    font-weight: 600;
+}
+
+.LeftTopIntroductionGraphTheory h3 {
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.InteractiveCanvas {
+    width: 400px;
+    height: 300px;
+    /* border: 2px solid #000; */
+    /* background: #fff; */
+    cursor: pointer;
+}
+
+.InteractiveCanvas .node {
+    cursor: grab;
+}
+
+.InteractiveCanvas .node:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.MiddleIntroductionGraphTheory {
+    display: flex;
+    padding: 2em 8em;
+    justify-content: center;
+    align-items: start;
+    gap: 2em;
+}
+
+.LeftMiddleIntroductionGraphTheory {
+    width: 40%;
+    height: 30vh;
+    position: relative;
+    border-left: solid 4px black;
+    border-bottom: solid 4px black;
+    box-shadow: 0px 4px 4px black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LeftMiddleIntroductionGraphTheory h1,
+.LeftMiddleIntroductionGraphTheory p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.RightMiddleIntroductionGraphTheory {
+    margin-top: 0;
+    width: 40%;
+    height: 30vh;
+    position: relative;
+    border-bottom: solid 4px black;
+    border-right: solid 4px black;
+    box-shadow: 4px 4px 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddleIntroductionGraphTheory h1,
+.RightMiddleIntroductionGraphTheory p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.FooterIntroductionGraphTheory {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    position: relative;
+    z-index: 100;
+}
+
+.TopFooterIntroduction {
+    padding: 0em 3em;
+}
+
+.TopFooterIntroduction h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 34px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+}
+
+.EndFooterIntroduction ul {
+    padding-left: 100px;
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+}
+
+.EndFooterIntroduction ul li {
+    margin: 0.50em 0em;
+}
+
+/* Subtopics Tabs */
+.SubtopicsTabs {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 1em;
+}
+
+.tab-button {
+    padding: 0.75em 1.5em;
+    background: #fff;
+    border: 2px solid #000;
+    font-family: "Archivo", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.tab-button.active {
+    background: #000;
+    color: #fff;
+}
+
+/* Graph Coloring Section */
+.GraphColoring {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+    position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+}
+
+.GraphColoringContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopGraphColoring {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+.TopGraphColoring h1 {
+    padding-left: 50px;
+    text-align: left;
+    position: relative;
+    font-family: "Archivo", sans-serif;
+    font-size: 50px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.TopGraphColoring p {
+    padding: 0.50em;
+    font-family: "Archivo", sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 40px;
+}
+
+.ColorPicker {
+    display: flex;
+    gap: 0.5em;
+    padding-left: 100px;
+    margin-top: 1em;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.2);
+}
+
+.color-option.selected {
+    transform: scale(1.3);
+    border: 3px solid #000;
+}
+
+.MiddleGraphColoring {
+    display: flex;
+    padding: 2em 8em;
+    justify-content: center;
+    align-items: start;
+    gap: 2em;
+}
+
+.LeftMiddleGraphColoring {
+    width: 40%;
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.RightMiddleGraphColoring {
+    margin-top: 0;
+    width: 40%;
+    height: 40vh;
+    position: relative;
+    /* border-bottom: solid 4px black;
+    border-right: solid 4px black;
+    box-shadow: 4px 4px 4px black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddleGraphColoring h3,
+.RightMiddleGraphColoring p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.FooterGraphColoring {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopGraphColoringFooter {
+    padding: 0em 3em;
+}
+
+.TopGraphColoringFooter h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 34px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+}
+
+.EndGraphColoring ul {
+    padding-left: 100px;
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+}
+
+.EndGraphColoring ul li {
+    margin: 0.50em 0em;
+}
+
+/* Planar Graphs Section */
+.PlanarGraphs {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+    position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+}
+
+.PlanarGraphsContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopPlanarGraphs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+.TopPlanarGraphs h1 {
+    padding-left: 50px;
+    text-align: left;
+    position: relative;
+    font-family: "Archivo", sans-serif;
+    font-size: 50px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.TopPlanarGraphs p {
+    padding: 0.50em;
+    font-family: "Archivo", sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 40px;
+}
+
+.MiddlePlanarGraphs {
+    display: flex;
+    padding: 2em 8em;
+    justify-content: center;
+    align-items: start;
+    gap: 2em;
+}
+
+.LeftMiddlePlanarGraphs {
+    width: 40%;
+    height: 40vh;
+    position: relative;
+    /* border-left: solid 4px black;
+    border-bottom: solid 4px black;
+    box-shadow: 0px 4px 4px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddlePlanarGraphs {
+    margin-top: 0;
+    width: 40%;
+    height: 40vh;
+    position: relative;
+    /* border-bottom: solid 4px black;
+    border-right: solid 4px black;
+    box-shadow: 4px 4px 4px black; */
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddlePlanarGraphs h3,
+.RightMiddlePlanarGraphs p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.FooterPlanarGraphs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopPlanarGraphsFooter {
+    padding: 0em 3em;
+}
+
+.TopPlanarGraphsFooter h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 34px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+}
+
+.EndPlanarGraphs ul {
+    padding-left: 100px;
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+}
+
+.EndPlanarGraphs ul li {
+    margin: 0.50em 0em;
+}
+
+/* Graph Labeling Section */
+.GraphLabeling {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+    position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+}
+
+.GraphLabelingContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopGraphLabeling {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+.TopGraphLabeling h1 {
+    padding-left: 50px;
+    text-align: left;
+    position: relative;
+    font-family: "Archivo", sans-serif;
+    font-size: 50px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.TopGraphLabeling p {
+    padding: 0.50em;
+    font-family: "Archivo", sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 40px;
+}
+
+.MiddleGraphLabeling {
+    display: flex;
+    padding: 2em 8em;
+    justify-content: center;
+    align-items: start;
+    gap: 2em;
+}
+
+.LeftMiddleGraphLabeling {
+    width: 40%;
+    height: 40vh;
+    position: relative;
+    border-left: solid 4px black;
+    border-bottom: solid 4px black;
+    box-shadow: 0px 4px 4px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddleGraphLabeling {
+    margin-top: 0;
+    width: 40%;
+    height: 40vh;
+    position: relative;
+    border-bottom: solid 4px black;
+    border-right: solid 4px black;
+    box-shadow: 4px 4px 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddleGraphLabeling h3,
+.RightMiddleGraphLabeling p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.FooterGraphLabeling {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopGraphLabelingFooter {
+    padding: 0em 3em;
+}
+
+.TopGraphLabelingFooter h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 34px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+}
+
+.EndGraphLabeling ul {
+    padding-left: 100px;
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+}
+
+.EndGraphLabeling ul li {
+    margin: 0.50em 0em;
+}
+
+/* Real World Applications */
+.RealWorldApplications {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+}
+
+.RealWorldApplicationsContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopRealWorldApplications {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+.TopRealWorldApplications h1 {
+    padding-left: 50px;
+    text-align: left;
+    position: relative;
+    font-family: "Archivo", sans-serif;
+    font-size: 50px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.TopRealWorldApplications p {
+    padding: 0.50em;
+    font-family: "Archivo", sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 40px;
+}
+
+.MiddleRealWorldApplications {
+    display: flex;
+    padding: 2em 8em;
+    justify-content: center;
+    align-items: start;
+    gap: 2em;
+}
+
+.LeftMiddleRealWorldApplications {
+    width: 40%;
+    height: 30vh;
+    position: relative;
+    border-left: solid 4px black;
+    border-bottom: solid 4px black;
+    box-shadow: 0px 4px 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LeftMiddleRealWorldApplications h1,
+.LeftMiddleRealWorldApplications p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.RightMiddleRealWorldApplications {
+    margin-top: 0;
+    width: 40%;
+    height: 30vh;
+    position: relative;
+    border-bottom: solid 4px black;
+    border-right: solid 4px black;
+    box-shadow: 4px 4px 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMiddleRealWorldApplications h1,
+.RightMiddleRealWorldApplications p {
+    font-family: "Archivo", sans-serif;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.FooterRealWorldApplications {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopRealWorldApplicationsFooter {
+    padding: 0em 3em;
+}
+
+.TopRealWorldApplicationsFooter h1 {
+    font-family: "Archivo", sans-serif;
+    font-size: 34px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left;
+}
+
+.EndRealWorldApplications ul {
+    padding-left: 100px;
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+}
+
+.EndRealWorldApplications ul li {
+    margin: 0.50em 0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add these styles to your GraphTheory.css file */
+
+.NodeCountInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 100px;
+}
+
+.NodeCountInput label {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.NodeCountInput input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-family: "Archivo", sans-serif;
+}
+
+.LeftMiddleGraphColoring {
+  width: 40%;
+  height: 40vh;
+  position: relative;
+  /* border-left: solid 4px black;
+  border-bottom: solid 4px black;
+  box-shadow: 0px 4px 4px black; */
+  display: flex;
+  justify-content: center;
+  /* border: solid 2px red; */
+  align-items: center;
+
+  position: relative;
+  svg{
+    position: absolute;
+    bottom: 5%;
+  }
+}
+
+.LeftMiddleGraphColoring .InteractiveCanvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/* Add these styles to your GraphTheory.css file */
+
+.PathControls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.animation-btn {
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Archivo", sans-serif;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.animation-btn:hover:not(:disabled) {
+  background: #333;
+}
+
+.animation-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.animation-status {
+  color: #008000;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+#planarNodeCount {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-family: "Archivo", sans-serif;
+}
+
+.NodeCountInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 100px;
+}
+
+.NodeCountInput label {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+/* Add these styles to your GraphTheory.css file */
+
+.PlanarControls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.planar-btn {
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Archivo", sans-serif;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.planar-btn:hover {
+  background: #333;
+}
+
+.planar-result {
+  font-weight: bold;
+  margin: 0;
+}
+
+.planar-result.success {
+  color: #008000;
+}
+
+.planar-result.error {
+  color: #ff0000;
+}
+
+.crossing-edge {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+#planarNodeCount {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-family: "Archivo", sans-serif;
+}
+
+.NodeCountInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 100px;
+}
+
+.NodeCountInput label {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.TypesOfGraphs {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.TypesOfGraphs h1 {
+  font-family: "Archivo", sans-serif;
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.GraphType {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.GraphType h2 {
+  font-family: "Archivo", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.GraphType p {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.SimpleGraph, .DirectedGraph, .WeightedGraph, .CompleteGraph {
+  margin: 1em 0;
+} */
+
+
+
+.TypesOfGraphsPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  box-sizing: border-box;
+  gap: 0.5em;
+}
+
+.pageHeading {
+  font-family: "Archivo", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.GraphsGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5em;
+  align-items: center;
+  justify-items: center;
+}
+
+.GraphType {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 0.8em; */
+  padding: 1em;
+  /* padding-bottom: 0em; */
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.GraphType h2 {
+  font-family: "Archivo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.GraphType p {
+  font-family: "Archivo", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0.2em 0;
+}
+
+.GraphType svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+
+  align-self:flex-start;
+  /* border: solid 2px red; */
+}

@@ -1,0 +1,927 @@
+.GroupTheory {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.GroupTheoryContainer {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.LagrangeTheorem {
+    min-height: 100vh;
+    width: 100%;
+
+    margin-top: 3em;
+}
+
+.LagrangeTheoremContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .TopLagrange {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .LeftTopLagrange {
+
+            .SvgAbs {
+                position: absolute;
+                stroke: #edede8;
+                z-index: 15;
+                top: 10%;
+            }
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3em;
+
+            h1 {
+                position: relative;
+                font-family: "Archivo", sans-serif;
+                font-size: 50px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-align: left;
+            }
+
+            p {
+                font-family: "Archivo", sans-serif;
+                font-size: 25px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: left;
+                padding-left: 100px;
+            }
+
+            h2 {
+                font-family: "Archivo", sans-serif;
+                font-size: 18px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: left;
+
+                .thenSpan {
+                    width: 100%;
+                    font-weight: 20px;
+                    padding-left: 200px;
+                    font-weight: 600;
+                }
+
+                h3 {
+                    font-family: "Archivo", sans-serif;
+                    font-size: 18px;
+                    width: 100%;
+
+                    font-weight: 300;
+                    text-align: left;
+
+                }
+
+            }
+
+        }
+
+        /* Circle Wrapper */
+        .circle-wrapper {
+            position: relative;
+            width: 24rem;
+            height: 24rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "Archivo", sans-serif;
+        }
+
+        /* Main Circle */
+        .main-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .g-label {
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: black;
+        }
+
+        .g-order {
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.875rem;
+            color: black;
+        }
+
+        /* Coset Defaults */
+        .coset {
+            position: absolute;
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .coset-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .coset-size {
+            font-size: 0.75rem;
+        }
+
+        /* Coset 1 */
+        .coset1 {
+            top: 15%;
+            left: 15%;
+            border: 3px solid black;
+            background: #e9d5ff;
+        }
+
+        .coset1 .coset-title {
+            color: black;
+        }
+
+        .coset1 .coset-size {
+            color: black;
+        }
+
+        /* Coset 2 */
+        .coset2 {
+            top: 15%;
+            right: 15%;
+            border: 3px solid #ec4899;
+            background: #fbcfe8;
+        }
+
+        .coset2 .coset-title {
+            color: black;
+        }
+
+        .coset2 .coset-size {
+            color: black;
+        }
+
+        /* Coset 3 */
+        .coset3 {
+            bottom: 15%;
+            left: 15%;
+            border: 3px solid #14b8a6;
+            background: #ccfbf1;
+        }
+
+        .coset3 .coset-title {
+            color: black;
+        }
+
+        .coset3 .coset-size {
+            color: black;
+        }
+
+        /* Coset 4 */
+        .coset4 {
+            bottom: 15%;
+            right: 15%;
+            border: 3px solid #f59e0b;
+            background: #fde68a;
+        }
+
+        .coset4 .coset-title {
+            color: black;
+        }
+
+        .coset4 .coset-size {
+            color: black;
+        }
+
+        /* Formula Box */
+        .formula-box {
+            margin-top: 3rem;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s ease;
+            text-align: center;
+        }
+
+        .formula-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .formula-sub {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+        .formula-note {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+    }
+
+
+    .MiddleLagrange {
+        display: flex;
+        padding: 4em 8em;
+        justify-content: center;
+        align-items: start;
+        gap: 2em;
+
+        .LeftMiddleLagrange {
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-left: solid 4px black;
+            border-bottom: solid 4px black;
+            box-shadow: 0px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+            }
+
+            svg {
+                position: absolute;
+                top: -10%;
+                left: -10%;
+            }
+        }
+
+        .RightMiddleLagrange {
+            margin-top: 50px;
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-bottom: solid 4px black;
+            border-right: solid 4px black;
+            box-shadow: 4px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            svg {
+                position: absolute;
+                bottom: -10%;
+                right: -10%;
+            }
+
+        }
+    }
+
+    .FooterLagrange {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .TopFooter {
+            padding: 0em 3em;
+
+            h1 {
+                font-family: "Archivo", sans-serif;
+                font-size: 34px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 500;
+                text-align: left;
+            }
+        }
+
+        .EndFooter {
+            ul {
+                padding-left: 200px;
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 200;
+                text-align: left;
+
+                li {
+                    margin: 0.50em 0em;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
+
+
+.Isomorphism {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+    position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+
+}
+
+.IsomorphismContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .TopIsomorphism {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 1em;
+
+        h1 {
+            padding-left: 50px;
+            text-align: left;
+            position: relative;
+            font-family: "Archivo", sans-serif;
+            font-size: 50px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            /* text-align: left; */
+        }
+
+        p {
+            padding: 0.50em;
+            font-family: "Archivo", sans-serif;
+            font-size: 25px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: left;
+            padding-left: 100px;
+            line-height: 40px;
+
+            h3 {
+                font-family: "Archivo", sans-serif;
+                font-size: 18px;
+                width: 100%;
+                font-weight: 300;
+                text-align: left;
+
+            }
+
+            .spaceSpan {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .MiddleIsomorphism {
+        display: flex;
+        padding: 4em 8em;
+        justify-content: center;
+        align-items: start;
+        gap: 2em;
+
+        .LeftMiddleIsomorphism {
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-left: solid 4px black;
+            border-bottom: solid 4px black;
+            box-shadow: 0px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+            }
+
+            svg {
+                position: absolute;
+                top: -10%;
+                left: -10%;
+            }
+        }
+
+        .RightMiddleIsomorphism {
+            margin-top: 50px;
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-bottom: solid 4px black;
+            border-right: solid 4px black;
+            box-shadow: 4px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            svg {
+                position: absolute;
+                bottom: -10%;
+                right: -10%;
+            }
+
+        }
+    }
+
+
+    .FooterIsomorphism {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .TopIsomorphismFooter {
+            padding: 0em 3em;
+
+            h1 {
+                font-family: "Archivo", sans-serif;
+                font-size: 34px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 500;
+                text-align: left;
+            }
+        }
+
+        .EndIsomorphism {
+            ul {
+                padding-left: 200px;
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 200;
+                text-align: left;
+
+                li {
+                    margin: 0.50em 0em;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+.Homomorphism {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 5em;
+    position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+}
+
+.HomomorphismContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .TopHomorphism {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 1em;
+
+        h1 {
+            padding-left: 50px;
+            text-align: left;
+            position: relative;
+            font-family: "Archivo", sans-serif;
+            font-size: 50px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            /* text-align: left; */
+        }
+
+        p {
+            padding: 0.50em;
+            font-family: "Archivo", sans-serif;
+            font-size: 25px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: left;
+            padding-left: 100px;
+            line-height: 40px;
+
+            h3 {
+                font-family: "Archivo", sans-serif;
+                font-size: 18px;
+                width: 100%;
+                font-weight: 800;
+                text-align: left;
+
+            }
+
+
+            .spaceSpan {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .MiddleHomomorphism {
+        display: flex;
+        padding: 4em 8em;
+        justify-content: center;
+        align-items: start;
+        gap: 2em;
+
+        .LeftMiddleHomomorphism {
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-left: solid 4px black;
+            border-bottom: solid 4px black;
+            box-shadow: 0px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+            }
+
+            svg {
+                position: absolute;
+                top: -10%;
+                left: -10%;
+            }
+        }
+
+        .RightMiddleHomorphism {
+            margin-top: 50px;
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-bottom: solid 4px black;
+            border-right: solid 4px black;
+            box-shadow: 4px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            svg {
+                position: absolute;
+                bottom: -10%;
+                right: -10%;
+            }
+
+        }
+    }
+
+    .FooterHomomorphism {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .TopHomomorphismFooter {
+            padding: 0em 3em;
+
+            h1 {
+                font-family: "Archivo", sans-serif;
+                font-size: 34px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 500;
+                text-align: left;
+            }
+        }
+
+        .EndHomomorphism {
+            ul {
+                padding-left: 200px;
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 200;
+                text-align: left;
+
+                li {
+                    margin: 0.50em 0em;
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+}
+
+
+.Automorphism {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 5em;
+    margin-bottom: 2em;
+        position: relative;
+    z-index: 20;
+    border-top: black solid 2px;
+    background-color: white;
+}
+
+.AutomorphismContainer {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .TopAutomorphism {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        padding: 1em;
+
+        h1 {
+            padding-left: 50px;
+            text-align: left;
+            position: relative;
+            font-family: "Archivo", sans-serif;
+            font-size: 50px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            /* text-align: left; */
+        }
+
+        p {
+            padding: 0.50em;
+            font-family: "Archivo", sans-serif;
+            font-size: 25px;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: left;
+            padding-left: 100px;
+            line-height: 40px;
+
+            h3 {
+                font-family: "Archivo", sans-serif;
+                font-size: 18px;
+                width: 100%;
+                font-weight: 800;
+                text-align: left;
+
+            }
+
+
+            .spaceSpan {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .MiddleAutomorphism {
+        display: flex;
+        padding: 4em 8em;
+        justify-content: center;
+        align-items: start;
+        gap: 2em;
+
+        .LeftMiddleAutomorphism {
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-left: solid 4px black;
+            border-bottom: solid 4px black;
+            box-shadow: 0px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+            }
+
+            svg {
+                position: absolute;
+                top: -10%;
+                left: -10%;
+            }
+        }
+
+        .RightMiddleAutomorphism {
+            margin-top: 50px;
+            width: 40%;
+            height: 70vh;
+            position: relative;
+            border-bottom: solid 4px black;
+            border-right: solid 4px black;
+            box-shadow: 4px 4px 4px black;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                z-index: 10;
+
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            svg {
+                position: absolute;
+                bottom: -10%;
+                right: -10%;
+            }
+
+        }
+    }
+
+    .FooterAutomorphism {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .TopAutomorphismFooter {
+            padding: 0em 3em;
+
+            h1 {
+                font-family: "Archivo", sans-serif;
+                font-size: 34px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 500;
+                text-align: left;
+            }
+        }
+
+        .EndAutomorphism {
+            ul {
+                padding-left: 200px;
+                font-family: "Archivo", sans-serif;
+                font-size: 24px;
+                width: 100%;
+                text-transform: uppercase;
+                font-weight: 200;
+                text-align: left;
+
+                li {
+                    margin: 0.50em 0em;
+                }
+
+            }
+        }
+    }
+}

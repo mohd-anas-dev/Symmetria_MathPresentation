@@ -1,0 +1,563 @@
+
+
+.z7-main-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Archivo", sans-serif;
+  background-color: #ffffff;
+  padding: 2em 0;
+}
+
+/* Introduction Section */
+.z7-intro-block {
+  width: 100%;
+  padding: 3em 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.z7-page-title {
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 50px;
+  position: relative;
+}
+
+.z7-page-intro-text {
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 100px;
+  line-height: 40px;
+}
+
+.z7-definition-box {
+  background-color: #f5f5f5;
+  border-left: 4px solid black;
+  padding: 2em;
+  margin: 2em 0;
+  margin-left: 100px;
+  box-shadow: 4px 4px 0px black;
+}
+
+.z7-definition-box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.z7-definition-box p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+/* Visualization Section */
+.z7-visual-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4em 3em;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.z7-graph-wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.z7-graph-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.z7-graph-node {
+  fill: #481E01;
+  stroke: black;
+  stroke-width: 3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.z7-graph-node:hover,
+.z7-graph-node.z7-node-highlighted {
+  fill: #FFE1B5;
+  /* transform: scale(1.1); */
+  filter: drop-shadow(0 0 10px #FFE1B5);
+}
+.z7-graph-node:hover, .z7-node-text{
+  stroke: black;
+}
+
+.z7-node-text {
+  font-size: 24px;
+  font-weight: 700;
+  fill: white;
+  pointer-events: none;
+  user-select: none;
+}
+
+.z7-connect-line {
+  stroke: #d1d5db;
+  stroke-width: 2;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.z7-connect-line.z7-hover-active {
+  stroke: #481E01;
+  stroke-width: 3;
+  opacity: 1;
+  animation: z7-pulse-anim 1s infinite;
+}
+
+.z7-connect-line.z7-table-sync-line {
+  stroke: black;
+  stroke-width: 4;
+  opacity: 1;
+  animation: z7-table-pulse-anim 0.8s ease-in-out infinite;
+}
+
+.z7-connect-line.z7-inverse-link {
+  stroke: #14b8a6;
+  stroke-width: 3;
+  opacity: 1;
+  animation: z7-inverse-pulse-anim 2s ease-in-out infinite;
+}
+
+.z7-connect-line.z7-assoc-link {
+  stroke: #8b5cf6;
+  stroke-width: 4;
+  opacity: 1;
+  animation: z7-assoc-pulse-anim 1s ease-in-out infinite;
+}
+
+@keyframes z7-pulse-anim {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes z7-table-pulse-anim {
+  0%, 100% {
+    stroke-width: 4;
+    opacity: 1;
+  }
+  50% {
+    stroke-width: 6;
+    opacity: 0.7;
+  }
+}
+
+@keyframes z7-inverse-pulse-anim {
+  0%, 100% {
+    stroke-width: 3;
+    opacity: 1;
+  }
+  50% {
+    stroke-width: 5;
+    opacity: 0.6;
+  }
+}
+
+@keyframes z7-assoc-pulse-anim {
+  0%, 100% {
+    stroke-width: 4;
+    opacity: 1;
+  }
+  50% {
+    stroke-width: 6;
+    opacity: 0.8;
+  }
+}
+
+.z7-operation-text {
+  font-size: 24px;
+  font-weight: 700;
+  fill: black;
+  animation: z7-label-fade-anim 0.8s ease-in-out infinite;
+}
+
+.z7-assoc-text {
+  fill: black;
+}
+
+@keyframes z7-label-fade-anim {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.z7-assoc-display-box {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px black;
+  animation: z7-display-pulse-anim 1.5s ease-in-out infinite;
+}
+
+@keyframes z7-display-pulse-anim {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+/* Table Container */
+.z7-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.z7-table-wrapper h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.z7-mult-grid {
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.z7-mult-grid th,
+.z7-mult-grid td {
+  border: 2px solid black;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 50px;
+}
+
+.z7-mult-grid th {
+  background-color: #f5f5f5;
+  font-weight: 700;
+}
+
+.z7-mult-grid td {
+  background-color: white;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.z7-mult-grid td.z7-cell-filled {
+  opacity: 1;
+  background-color: #FFE1B5;
+}
+
+.z7-mult-grid td.z7-cell-animating {
+  background-color: #481E01;
+  color: white;
+  transform: scale(1.1);
+  animation: z7-cell-pulse-anim 0.5s ease;
+  box-shadow: 0 0 20px #481E01;
+}
+
+@keyframes z7-cell-pulse-anim {
+  0%, 100% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px #ec4899;
+  }
+}
+
+/* Controls Section */
+.z7-controls-block {
+  padding: 2em 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.z7-controls-block h3 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-left: 50px;
+}
+
+.z7-control-btns {
+  display: flex;
+  gap: 1em;
+  padding-left: 100px;
+  flex-wrap: wrap;
+}
+
+.z7-ctrl-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: white;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Archivo", sans-serif;
+}
+
+.z7-ctrl-btn:hover:not(:disabled) {
+  background-color: black;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px black;
+}
+
+.z7-ctrl-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Properties Section */
+.z7-properties-block {
+  padding: 4em 5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  background-color: #f9fafb;
+  margin-top: 3em;
+  border-top: 2px solid black;
+}
+
+.z7-properties-title {
+  grid-column: 1 / -1;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 50px;
+}
+
+.z7-prop-card {
+  background-color: white;
+  border: 3px solid black;
+  padding: 2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.z7-prop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0px black;
+}
+
+.z7-prop-icon {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 1em;
+  gap: 0.4em;
+}
+
+.z7-prop-card h3 {
+  font-size: 23px;
+  font-weight: 500;
+  width: 100%;
+  text-transform: uppercase;
+  /* margin-bottom: 1em; */
+}
+
+.z7-prop-card p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.z7-prop-example {
+  margin-top: 1em;
+  font-weight: 400;
+  background-color: #f5f5f5;
+  padding: 0.5em;
+  border-left: 3px solid #a855f7;
+}
+
+.z7-inverse-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.z7-inverse-item {
+  font-family: monospace;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+/* Property Buttons */
+.z7-highlight-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 2em 3em;
+  flex-wrap: wrap;
+}
+
+.z7-highlight-btn {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: white;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Archivo", sans-serif;
+}
+
+.z7-highlight-btn:hover {
+  background-color: black;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px black;
+  color: white;
+}
+
+.z7-highlight-btn.z7-btn-active {
+  background-color: black;
+  color: white;
+}
+
+/* Footer Section */
+.z7-footer-block {
+  padding: 4em 5em;
+  background-color: white;
+  border-top: 2px solid black;
+  margin-top: 3em;
+}
+
+.z7-footer-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 50px;
+  margin-bottom: 0.5em;
+}
+
+.z7-footer-content {
+  display: flex;
+  gap: 4em;
+  padding-left: 100px;
+  flex-wrap: wrap;
+}
+
+.z7-recap-items,
+.z7-applications ul {
+  list-style-position: inside;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+.z7-recap-items li,
+.z7-applications ul li {
+  /* margin: 0.5em 0; */
+}
+
+.z7-applications h3 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .z7-visual-block {
+    flex-direction: column;
+  }
+  
+  .z7-properties-block {
+    grid-template-columns: 1fr;
+  }
+  
+  .z7-footer-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .z7-intro-block,
+  .z7-controls-block,
+  .z7-properties-block,
+  .z7-footer-block {
+    padding: 2em 2em;
+  }
+  
+  .z7-page-title {
+    font-size: 36px;
+    padding-left: 20px;
+  }
+  
+  .z7-page-intro-text {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+  
+  .z7-graph-wrapper {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .z7-control-btns,
+  .z7-highlight-btns {
+    padding-left: 20px;
+  }
+}
+
+
+
+
+
+
+
+.z7-connect-line.z7-assoc-operation {
+  stroke: #ff6b6b; /* Red color for the first operation */
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+}
+
+.z7-connect-line.z7-assoc-result {
+  stroke: #4ecdc4; /* Teal color for the result connection */
+  stroke-width: 3;
+  stroke-dasharray: 5, 5;
+}
+
+
+.z7-inverse-loop {
+  stroke: #14b8a6;
+  stroke-width: 2;
+}
+
+.z7-graph-node.z7-node-self-inverse {
+  stroke-width: 3;
+  stroke: #14b8a6;
+}
