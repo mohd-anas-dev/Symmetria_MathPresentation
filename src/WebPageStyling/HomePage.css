@@ -228,7 +228,7 @@
     height: 50vh;
     background-color: white;
     overflow: hidden;
-    border-bottom: solid 2px black;
+    /* border-bottom: solid 2px black; */
 
     .h1top {
         top: 100%;
@@ -237,7 +237,7 @@
 
 
 .bottom {
-    border-top: solid 2px black;
+    /* border-top: solid 2px black; */
     position: absolute;
     bottom: 0;
     width: 100%;

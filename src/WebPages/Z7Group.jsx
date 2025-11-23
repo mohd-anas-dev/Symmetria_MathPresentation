@@ -299,7 +299,7 @@ const Z7Multiplication = () => {
           return gsap.from(instance.chars, {
             yPercent: -40,
             color: "#bfbfbf42",
-            
+
             stagger: 0.5,
             scrollTrigger: {
               trigger: ".z7-properties-title",
@@ -337,109 +337,109 @@ const Z7Multiplication = () => {
 
 
   //* Text Animation -- Quick Recap List & Application List
-    //   useGSAP(() => {
-    //     gsap.set(".z7-recap-items, .z7-ULSLIST", {
-    //         color: "black"
-    //     })
+  //   useGSAP(() => {
+  //     gsap.set(".z7-recap-items, .z7-ULSLIST", {
+  //         color: "black"
+  //     })
 
-    //     const splittedTexts = gsap.utils.toArray(".z7-recap-items, .z7-ULSLIST")
-    //     splittedTexts.forEach((splits) => {
-    //         SplitText.create(splits, {
-    //             type: "words,lines",
-    //             mask: "lines",
-    //             linesClass: "line",
-    //             autoSplit: true,
-    //             onSplit: (instance) => {
-    //                 return gsap.from(instance.lines, {
-    //                     color: "#858585",
-    //                     y: 25,
-    //                     stagger: 0.1,
-    //                     scrollTrigger: {
-    //                         trigger: splittedTexts,
-    //                         start: "top 40%",
-    //                         end: "bottom 40%",
-    //                         scrub: 0.4,
-    //                         markers: true,
-    //                     },
-    //                     ease: "power4.inOut"
-    //                 })
-    //             }
-    //         })
-    //     })
+  //     const splittedTexts = gsap.utils.toArray(".z7-recap-items, .z7-ULSLIST")
+  //     splittedTexts.forEach((splits) => {
+  //         SplitText.create(splits, {
+  //             type: "words,lines",
+  //             mask: "lines",
+  //             linesClass: "line",
+  //             autoSplit: true,
+  //             onSplit: (instance) => {
+  //                 return gsap.from(instance.lines, {
+  //                     color: "#858585",
+  //                     y: 25,
+  //                     stagger: 0.1,
+  //                     scrollTrigger: {
+  //                         trigger: splittedTexts,
+  //                         start: "top 40%",
+  //                         end: "bottom 40%",
+  //                         scrub: 0.4,
+  //                         markers: true,
+  //                     },
+  //                     ease: "power4.inOut"
+  //                 })
+  //             }
+  //         })
+  //     })
 
-    //     // gsap.to(".HeadingText", {
-    //     //     color: "#ed590d",
-    //     //     scrollTrigger: {
-    //     //         trigger: ".HeadingText",
-    //     //         start: "top 60%",
-    //     //         end: "top 30%",
-    //     //         scrub: true, 
-    //     //         markers: true
-    //     //     }
-    //     // })
-    // })
+  //     // gsap.to(".HeadingText", {
+  //     //     color: "#ed590d",
+  //     //     scrollTrigger: {
+  //     //         trigger: ".HeadingText",
+  //     //         start: "top 60%",
+  //     //         end: "top 30%",
+  //     //         scrub: true, 
+  //     //         markers: true
+  //     //     }
+  //     // })
+  // })
 
-    useGSAP(() => {
-      const QRtimeLine = gsap.timeline()
+  useGSAP(() => {
+    const QRtimeLine = gsap.timeline()
 
-      QRtimeLine.set(".z7-footer-title, .z7-footer-Appli", {
-        color: "black"
-      })
-
-      const splittedTexts = gsap.utils.toArray(".z7-footer-title, .z7-footer-Appli")
-        splittedTexts.forEach((splits) => {
-            SplitText.create(splits, {
-                type: "words,lines",
-                mask: "lines",
-                linesClass: "line",
-                autoSplit: true,
-                onSplit: (instance) => {
-                    return QRtimeLine.from(instance.lines, {
-                        color: "#858585",
-                        y: 25,
-                        stagger: 0.1,
-                        scrollTrigger: {
-                            trigger: splittedTexts,
-                            start: "top 90%",
-                            end: "bottom 50%",
-                            scrub: 0.4,
-                        },
-                        ease: "power1.out"
-                    })
-                }
-            })
-        })
-
-
-        const SplittedTextsQR = gsap.utils.toArray(".z7-recap-items, .z7-ULSLIST")
-        SplittedTextsQR.forEach((splits) => {
-            SplitText.create(splits, {
-                type: "words,lines",
-                mask: "lines",
-                linesClass: "line",
-                autoSplit: true,
-                onSplit: (instance) => {
-                    return QRtimeLine.from(instance.lines, {
-                        color: "#858585",
-                        y: 25,
-                        stagger: 0.1,
-                        scrollTrigger: {
-                            trigger: splittedTexts,
-                            start: "top 40%",
-                            end: "bottom 40%",
-                            scrub: 0.4,
-                        },
-                        ease: "power1.out"
-                    })
-                }
-            })
-        })
-      
-
-      
+    QRtimeLine.set(".z7-footer-title, .z7-footer-Appli", {
+      color: "black"
     })
 
-    
+    const splittedTexts = gsap.utils.toArray(".z7-footer-title, .z7-footer-Appli")
+    splittedTexts.forEach((splits) => {
+      SplitText.create(splits, {
+        type: "words,lines",
+        mask: "lines",
+        linesClass: "line",
+        autoSplit: true,
+        onSplit: (instance) => {
+          return QRtimeLine.from(instance.lines, {
+            color: "#858585",
+            y: 25,
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: splittedTexts,
+              start: "top 90%",
+              end: "bottom 50%",
+              scrub: 0.4,
+            },
+            ease: "power1.out"
+          })
+        }
+      })
+    })
+
+
+    const SplittedTextsQR = gsap.utils.toArray(".z7-recap-items, .z7-ULSLIST")
+    SplittedTextsQR.forEach((splits) => {
+      SplitText.create(splits, {
+        type: "words,lines",
+        mask: "lines",
+        linesClass: "line",
+        autoSplit: true,
+        onSplit: (instance) => {
+          return QRtimeLine.from(instance.lines, {
+            color: "#858585",
+            y: 25,
+            stagger: 0.1,
+            scrollTrigger: {
+              trigger: splittedTexts,
+              start: "top 40%",
+              end: "bottom 40%",
+              scrub: 0.4,
+            },
+            ease: "power1.out"
+          })
+        }
+      })
+    })
+
+
+
+  })
+
+
 
 
 
@@ -454,16 +454,20 @@ const Z7Multiplication = () => {
         <div className="z7-intro-block">
           <h1 className="z7-page-title">Z₇ Under Multiplication</h1>
           <p className="z7-page-intro-text">
-            Z₇ is the set of integers {1, 2, 3, 4, 5, 6} under multiplication modulo 7.
+            Z₇ is the set of integers {`{1, 2, 3, 4, 5, 6}`} under multiplication modulo 7.
             This page visualizes the structure of Z₇ as a group, demonstrating multiplication,
             closure, identity, inverses, and associativity.
           </p>
           <div className="z7-definition-box">
             <h3 className='z7-definition-H3'>Definition of Z₇</h3>
             <p className='z7-definition-P'>
-              Z₇ consists of non-zero remainders when dividing by 7. We exclude 0 because
-              it has no multiplicative inverse modulo 7.
+              Z₇ = {`{1, 2, 3, 4, 5, 6}`} with multiplication mod 7 - that is, multiply normally then take the remainder when dividing by 7. We exclude 0 because 0 has no multiplicative inverse.
             </p>
+            <br />
+            <p className='z7-definition-P'>Take the numbers 1–6. Multiply two of them, then reduce mod 7 (keep remainder 0..6).
+              Example (step-by-step): 3 × 5 = 15. Divide 15 by 7 → 15 = 2·7 + 1. Remainder = 1. So 3 ×₇ 5 = 1.
+
+              Think of it as multiplication on a 7-tick wheel (but 0 is missing because it can’t be undone).</p>
           </div>
         </div>
         {/* Circular Visualization & Table */}
@@ -695,13 +699,16 @@ const Z7Multiplication = () => {
               <path className='closureSVG' d="M7 11.0001V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11.0001M5 22.0001H19C20.1046 22.0001 21 21.1046 21 20.0001V13.0001C21 11.8955 20.1046 11.0001 19 11.0001H5C3.89543 11.0001 3 11.8955 3 13.0001V20.0001C3 21.1046 3.89543 22.0001 5 22.0001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg> <h3>Closure</h3></div>
             {/* <h3>Closure</h3> */}
-            <p>All multiplication results modulo 7 remain within Z₇. For any a, b ∈ Z₇, a × b (mod 7) ∈ Z₇.</p>
+            <p>{"All multiplication results modulo 7 remain within Z₇."}<br />
+              {"{For any a, b ∈ Z₇, a × b (mod 7) ∈ Z₇}"}</p>
           </div>
           <div className="z7-prop-card" onClick={() => { setZ7ActiveProperty('identity'); setZ7HoveredNode(1); }}>
             <div className="z7-prop-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path className='IdentitySVG' d="M13 2.04938C12.6711 2.01672 12.3375 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6625 21.9833 11.3289 21.9506 11M16 8V5L19 2L20.125 3.875L22 5L19 8H16ZM16 8L12 12M12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg><h3>Identity Element</h3></div>
-            <p>1 is the multiplicative identity: 1 × a ≡ a × 1 ≡ a (mod 7) for all a ∈ Z₇.</p>
+            <p>Identity — 1 is the multiplicative identity because 1 · a = a (mod 7). <br />
+            <p>Demo: 1 ×₇ 5 = 5.</p>
+              </p>
           </div>
           <div className="z7-prop-card" onClick={() => setZ7ActiveProperty('inverse')}>
             <div className="z7-prop-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path className='InverseSVG' d="m3 16 4 4 4-4" /><path d="M7 20V4" /><path d="m21 8-4-4-4 4" /><path d="M17 4v16" /></svg><h3>Inverse Elements</h3></div>
@@ -773,7 +780,7 @@ const Z7Multiplication = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
