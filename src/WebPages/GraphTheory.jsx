@@ -5,6 +5,7 @@ import "../WebPageStyling/GraphTheory.css";
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { DrawSVGPlugin, ScrollTrigger, SplitText } from 'gsap/all';
+import Footer from '../Components/Footer.jsx';
 
 const GraphTheory = () => {
     const [activeTab, setActiveTab] = useState('introduction');
@@ -1423,6 +1424,7 @@ const GraphTheory = () => {
 
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

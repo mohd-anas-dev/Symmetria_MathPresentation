@@ -6,6 +6,7 @@ import ButtomTransitions from "../Components/ButtomTransitions.jsx"
 import { useGSAP } from '@gsap/react';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger, DrawSVGPlugin, SplitText } from 'gsap/all';
+import Footer from '../Components/Footer.jsx';
 
 // Register the plugin
 gsap.registerPlugin(ScrollToPlugin);
@@ -772,6 +773,7 @@ const Z7Multiplication = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

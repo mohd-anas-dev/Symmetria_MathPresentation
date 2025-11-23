@@ -10,6 +10,7 @@ import CustomEase from 'gsap/CustomEase'
 import { useEffect } from 'react'
 import GroupTheoryImg from "../Components/LangTheorem.png"
 import Footer from '../Components/Footer.jsx'
+import { useNavigate } from 'react-router-dom'
 
 CustomEase.create(
     "hop",
@@ -17,6 +18,7 @@ CustomEase.create(
 )
 const HomePage = () => {
     gsap.registerPlugin(ScrollTrigger)
+    const navigate = useNavigate()
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -176,7 +178,7 @@ const HomePage = () => {
             delay: 1,
             scaleY: 0,
             transformOrigin: "top top",
-            stagger: 0.079,
+            // stagger: 0.079,
             duration: 0.8,
             ease: "hop"
         });
@@ -302,28 +304,28 @@ const HomePage = () => {
                         <div className="HomePageOneBottom">
                             <div className="carousel">
                                 <div className="group">
-                                    <div className="card"><img className='imgsCar' src={GroupTheoryImg} alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://i.pinimg.com/originals/32/f7/0e/32f70ea9f5c24b4152c3db659c31512c.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://tse4.mm.bing.net/th/id/OIP.-_XBiWxSht_1XpIT0ZDKeQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" /><h1>Graph Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9d2657436635.59d5a448a02e4.jpg" alt="" /><h1>Z₇ Group</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://tse1.mm.bing.net/th/id/OIF.wooZ6ztkJLBD6hdHtGhLxQ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://images.pexels.com/photos/6226956/pexels-photo-6226956.jpeg?cs=srgb&dl=pexels-gaurav-ranjitkar-6226956.jpg&fm=jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.kent.edu/~white/qual/list/group.pdf", "_blank")}><img className='imgsCar' src='https://uwaterloo.ca/math/sites/default/files/uploads/images/apparatus-and-hand-dali.jpg' alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.toronto.edu/barbeau/elemcomb.pdf", "_blank")}><img className='imgsCar' src="https://old.maa.org/sites/default/files/images/upload_library/46/Smithsonian/NMAH-2008-2519.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://web.mat.upc.edu/fib/matematiques1/docs/pm1_graphs.pdf", "_blank")}><img className='imgsCar' src="https://ids.si.edu/ids/deliveryService?id=NMAH-2008-2546&max_w=550" alt="" /><h1>Graph Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card"><img className='imgsCar' src="https://i0.wp.com/www.guggenheim.org/wp-content/uploads/2016/07/artwork-vasily-kandinsky-composition-8-37.262.jpg" alt="" /><h1>Z₇ Group</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.kent.edu/~white/qual/list/group.pdf", "_blank")}><img className='imgsCar' src="https://uwaterloo.ca/math/sites/default/files/uploads/images/apparatus-and-hand-dali.jpg" alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.toronto.edu/barbeau/elemcomb.pdf", "_blank")}><img className='imgsCar' src="https://old.maa.org/sites/default/files/images/upload_library/46/Smithsonian/NMAH-2008-2519.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
                                 </div>
                                 <div className="group" aria-hidden>
-                                    <div className="card"><img className='imgsCar' src={GroupTheoryImg} alt="" /><h1 className='H1GTH'>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://i.pinimg.com/originals/32/f7/0e/32f70ea9f5c24b4152c3db659c31512c.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://tse4.mm.bing.net/th/id/OIP.-_XBiWxSht_1XpIT0ZDKeQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" /><h1>Graph Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9d2657436635.59d5a448a02e4.jpg" alt="" /><h1>Z₇ Group</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://tse1.mm.bing.net/th/id/OIF.wooZ6ztkJLBD6hdHtGhLxQ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://images.pexels.com/photos/6226956/pexels-photo-6226956.jpeg?cs=srgb&dl=pexels-gaurav-ranjitkar-6226956.jpg&fm=jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.kent.edu/~white/qual/list/group.pdf", "_blank")}><img className='imgsCar' src='https://uwaterloo.ca/math/sites/default/files/uploads/images/apparatus-and-hand-dali.jpg' alt="" /><h1 className='H1GTH'>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.toronto.edu/barbeau/elemcomb.pdf", "_blank")}><img className='imgsCar' src="https://old.maa.org/sites/default/files/images/upload_library/46/Smithsonian/NMAH-2008-2519.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://web.mat.upc.edu/fib/matematiques1/docs/pm1_graphs.pdf", "_blank")}><img className='imgsCar' src="https://ids.si.edu/ids/deliveryService?id=NMAH-2008-2546&max_w=550" alt="" /><h1>Graph Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card"><img className='imgsCar' src="https://i0.wp.com/www.guggenheim.org/wp-content/uploads/2016/07/artwork-vasily-kandinsky-composition-8-37.262.jpg" alt="" /><h1>Z₇ Group</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.kent.edu/~white/qual/list/group.pdf", "_blank")}><img className='imgsCar' src="https://uwaterloo.ca/math/sites/default/files/uploads/images/apparatus-and-hand-dali.jpg" alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.toronto.edu/barbeau/elemcomb.pdf", "_blank")}><img className='imgsCar' src="https://old.maa.org/sites/default/files/images/upload_library/46/Smithsonian/NMAH-2008-2519.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
                                 </div>
                                 <div className="group" aria-hidden>
-                                    <div className="card"><img className='imgsCar' src={GroupTheoryImg} alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://i.pinimg.com/originals/32/f7/0e/32f70ea9f5c24b4152c3db659c31512c.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://tse4.mm.bing.net/th/id/OIP.-_XBiWxSht_1XpIT0ZDKeQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" /><h1>Graph Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba9d2657436635.59d5a448a02e4.jpg" alt="" /><h1>Z₇ Group</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://tse1.mm.bing.net/th/id/OIF.wooZ6ztkJLBD6hdHtGhLxQ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
-                                    <div className="card"><img className='imgsCar' src="https://images.pexels.com/photos/6226956/pexels-photo-6226956.jpeg?cs=srgb&dl=pexels-gaurav-ranjitkar-6226956.jpg&fm=jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.kent.edu/~white/qual/list/group.pdf", "_blank")}><img className='imgsCar' src='https://uwaterloo.ca/math/sites/default/files/uploads/images/apparatus-and-hand-dali.jpg' alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.toronto.edu/barbeau/elemcomb.pdf", "_blank")}><img className='imgsCar' src="https://old.maa.org/sites/default/files/images/upload_library/46/Smithsonian/NMAH-2008-2519.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://web.mat.upc.edu/fib/matematiques1/docs/pm1_graphs.pdf", "_blank")}><img className='imgsCar' src="https://ids.si.edu/ids/deliveryService?id=NMAH-2008-2546&max_w=550" alt="" /><h1>Graph Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card"><img className='imgsCar' src="https://i0.wp.com/www.guggenheim.org/wp-content/uploads/2016/07/artwork-vasily-kandinsky-composition-8-37.262.jpg" alt="" /><h1>Z₇ Group</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.kent.edu/~white/qual/list/group.pdf", "_blank")}><img className='imgsCar' src="https://uwaterloo.ca/math/sites/default/files/uploads/images/apparatus-and-hand-dali.jpg" alt="" /><h1>Group Theory</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
+                                    <div className="card" onClick={()=>window.open("https://www.math.toronto.edu/barbeau/elemcomb.pdf", "_blank")}><img className='imgsCar' src="https://old.maa.org/sites/default/files/images/upload_library/46/Smithsonian/NMAH-2008-2519.jpg" alt="" /><h1>Combinatorics</h1><h2><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-down-right-icon lucide-corner-down-right"><path d="m15 10 5 5-5 5" /><path d="M4 4v7a4 4 0 0 0 4 4h12" /></svg>Explore</h2></div>
                                 </div>
                                 {/* <div className="group" aria-hidden>
                                     <div className="card"><img className='imgsCar' src="https://images.pexels.com/photos/33930807/pexels-photo-33930807.jpeg?cs=srgb&dl=pexels-thistefan-istefan-2155860114-33930807.jpg&fm=jpg" alt="" /></div>
@@ -361,58 +363,58 @@ const HomePage = () => {
                             {/* <div className="ImageOverLay1">
                     <img src="https://i.pinimg.com/736x/c6/c3/62/c6c36212286d7a97c0eb2940408161f0.jpg" alt="" />
                 </div> */}
-                            <div className="TeamComp">
+                            <div className="TeamComp" onClick={()=> {navigate("/grouptheory")}}>
                                 <div className="overlay"></div>
                                 <div className="TeamLeft">
-                                    <h4>Mohammed Anas</h4>
+                                    <h4>Mohammed Zuhaib Ahsan Khan</h4>
                                 </div>
                                 <div className="TeamRight">
-                                    <h4>Web Designing</h4>
+                                    <h4>Group Theory<sup className='raiseTo'>/01</sup></h4>
                                 </div>
                             </div>
-                            <div className="TeamComp">
-                                <div className="overlay"></div>
-                                <div className="TeamLeft">
-                                    <h4>Sayed Mohammed Anas</h4>
-                                </div>
-                                <div className="TeamRight">
-                                    <h4>Group Theory</h4>
-                                </div>
-                            </div>
-                            <div className="TeamComp">
-                                <div className="overlay"></div>
-                                <div className="TeamLeft">
-                                    <h4>Zuhaib Mohammed Ahsan Khan</h4>
-                                </div>
-                                <div className="TeamRight">
-                                    <h4>Graph Theory</h4>
-                                </div>
-                            </div>
-                            <div className="TeamComp">
+                            <div className="TeamComp" onClick={()=> {navigate("/grouptheory")}}>
                                 <div className="overlay"></div>
                                 <div className="TeamLeft">
                                     <h4>Shane William</h4>
                                 </div>
                                 <div className="TeamRight">
-                                    <h4>Combinatorics</h4>
+                                    <h4>Group Theory<sup className='raiseTo'>/02</sup></h4>
                                 </div>
                             </div>
-                            <div className="TeamComp">
+                            <div className="TeamComp"onClick={()=> {navigate("/combinatorics")}}>
                                 <div className="overlay"></div>
                                 <div className="TeamLeft">
-                                    <h4>Harsh Jamwaal</h4>
+                                    <h4>Mohammed Anas</h4>
                                 </div>
                                 <div className="TeamRight">
-                                    <h4>Z₇ Group</h4>
+                                    <h4>Combinatorics<sup className='raiseTo'>/01</sup></h4>
                                 </div>
                             </div>
-                            <div className="TeamComp">
+                            <div className="TeamComp"onClick={()=> {navigate("/graphtheory")}}>
                                 <div className="overlay"></div>
                                 <div className="TeamLeft">
                                     <h4>Mohammed Aleef</h4>
                                 </div>
                                 <div className="TeamRight">
-                                    <h4>Isomorphism</h4>
+                                    <h4>Graph Theory <sup className='raiseTo'>/01</sup></h4>
+                                </div>
+                            </div>
+                            <div className="TeamComp"onClick={()=> {navigate("/graphtheory")}}>
+                                <div className="overlay"></div>
+                                <div className="TeamLeft">
+                                    <h4>Harsh Jamwal</h4>
+                                </div>
+                                <div className="TeamRight">
+                                    <h4>Graph Theory<sup className='raiseTo'>/02</sup></h4>
+                                </div>
+                            </div>
+                            <div className="TeamComp"onClick={()=> {navigate("/z7group")}}>
+                                <div className="overlay"></div>
+                                <div className="TeamLeft">
+                                    <h4>Sayed Muhammed Anas</h4>
+                                </div>
+                                <div className="TeamRight">
+                                    <h4>Z₇ Group<sup className='raiseTo'>/01</sup></h4>
                                 </div>
                             </div>
                             {/* <div className="TeamComp">
@@ -437,7 +439,9 @@ const HomePage = () => {
                     </div> */}
                 </div>
             </div>
+            <Footer/>
         </>
+
     )
 }
 

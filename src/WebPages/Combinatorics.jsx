@@ -5,6 +5,7 @@ import ButtomTransitions from "../Components/ButtomTransitions.jsx"
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { DrawSVGPlugin, SplitText } from 'gsap/all';
+import Footer from '../Components/Footer.jsx';
 
 const FlagArrangement = () => {
     const [redCount, setRedCount] = useState(4);
@@ -591,6 +592,7 @@ const FlagArrangement = () => {
                     <p>Interactive Combinatorics Learning Tool • Understanding Permutations with Repetition</p>
                 </footer>
             </div>
+            <Footer/>
         </>
     );
 };

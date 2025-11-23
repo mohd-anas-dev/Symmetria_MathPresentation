@@ -8,6 +8,7 @@ import TopTransitions from "../Components/TopTransitions.jsx"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger, SplitText, DrawSVGPlugin } from 'gsap/all'
+import Footer from '../Components/Footer.jsx'
 
 const GroupTheory = () => {
   const coset1Ref = useRef(null);
@@ -1183,6 +1184,7 @@ const GroupTheory = () => {
 
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

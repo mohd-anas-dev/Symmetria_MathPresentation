@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomePage from './WebPages/HomePage'
 import { Route, Routes } from 'react-router-dom'
 import GroupTheory from './WebPages/GroupTheory'
@@ -12,9 +12,11 @@ import { useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Transitions from './Components/Transitions'
 import Footer from './Components/Footer'
+import NotFound from './Components/NotFound'
 
 const App = () => {
   const myLocation = useLocation()
+  
   useGSAP(() => {
     gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
     const smoother = ScrollSmoother.create({
@@ -26,6 +28,16 @@ const App = () => {
     })
     return () => smoother.kill()
   }, [])
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    const smoother = ScrollSmoother.get()
+    if (smoother) {
+      smoother.scrollTo(0, false) // false for instant scroll without animation
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [myLocation.pathname])
   return (
     <>
       <div id="smooth-wrapper">
@@ -37,8 +49,8 @@ const App = () => {
               <Route path="/combinatorics" element={<Combinatorics />} />
               <Route path="/graphtheory" element={<GraphTheory />} />
               <Route path="/z7group" element={<Z7Group />} />
+              <Route path="*" element={<NotFound/>} />
             </Routes>
-            <Footer/>
           </AnimatePresence>
         </div>
       </div>
