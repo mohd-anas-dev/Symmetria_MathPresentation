@@ -402,7 +402,7 @@ const HomePage = () => {
                             <div className="TeamComp"onClick={()=> {navigate("/graphtheory")}}>
                                 <div className="overlay"></div>
                                 <div className="TeamLeft">
-                                    <h4>Harsh Jamwal</h4>
+                                    <h4>Harsh Shukla</h4>
                                 </div>
                                 <div className="TeamRight">
                                     <h4>Graph Theory<sup className='raiseTo'>/02</sup></h4>
