@@ -366,7 +366,7 @@ const HomePage = () => {
                             <div className="TeamComp" onClick={()=> {navigate("/grouptheory")}}>
                                 <div className="overlay"></div>
                                 <div className="TeamLeft">
-                                    <h4>Mohammed Zuhaib Ahsan Khan</h4>
+                                    <h4>Zuhaib Mohammed Ahsan Khan</h4>
                                 </div>
                                 <div className="TeamRight">
                                     <h4>Group Theory<sup className='raiseTo'>/01</sup></h4>
