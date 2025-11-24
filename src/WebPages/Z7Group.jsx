@@ -101,14 +101,14 @@ const Z7Multiplication = () => {
       const a = 2, b = 3, c = 4;
       let step = 0;
       const animationSteps = [
-        { type: 'highlight', nodes: [a, b], label: '(2 × 3)', operation: [a, b] },
+        { type: 'highlight', nodes: [a, b], label: '(2 ₇ 3)', operation: [a, b] },
         { type: 'result', from: a, to: b, result: z7MultiplyMod7(a, b), label: '= 6', operation: [a, b] },
-        { type: 'highlight', nodes: [z7MultiplyMod7(a, b), c], label: '6 × 4', operation: [z7MultiplyMod7(a, b), c] },
+        { type: 'highlight', nodes: [z7MultiplyMod7(a, b), c], label: '6 ₇ 4', operation: [z7MultiplyMod7(a, b), c] },
         { type: 'result', from: z7MultiplyMod7(a, b), to: c, result: z7MultiplyMod7(z7MultiplyMod7(a, b), c), label: '= 3', operation: [z7MultiplyMod7(a, b), c] },
         { type: 'reset' },
-        { type: 'highlight', nodes: [b, c], label: '(3 × 4)', operation: [b, c] },
+        { type: 'highlight', nodes: [b, c], label: '(3 ₇ 4)', operation: [b, c] },
         { type: 'result', from: b, to: c, result: z7MultiplyMod7(b, c), label: '= 5', operation: [b, c] },
-        { type: 'highlight', nodes: [a, z7MultiplyMod7(b, c)], label: '2 × 5', operation: [a, z7MultiplyMod7(b, c)] },
+        { type: 'highlight', nodes: [a, z7MultiplyMod7(b, c)], label: '2 ₇ 5', operation: [a, z7MultiplyMod7(b, c)] },
         { type: 'result', from: a, to: z7MultiplyMod7(b, c), result: z7MultiplyMod7(a, z7MultiplyMod7(b, c)), label: '= 3', operation: [a, z7MultiplyMod7(b, c)] },
       ];
       const interval = setInterval(() => {
@@ -511,7 +511,7 @@ const Z7Multiplication = () => {
                     className="z7-operation-text"
                     textAnchor="middle"
                   >
-                    {z7CurrentMult.a} × {z7CurrentMult.b} = {z7CurrentMult.result}
+                    {z7CurrentMult.a} ₇ {z7CurrentMult.b} = {z7CurrentMult.result}
                   </text>
                 </g>
               )}

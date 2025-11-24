@@ -573,7 +573,7 @@ const FlagArrangement = () => {
                             <div className="app-icon">🧬</div>
                             <h3 className="app-title">Genetics & Biology</h3>
                             <p className="app-text">
-                                Similar principles apply to counting DNA sequences and protein arrangements with repeated amino acids.
+                                Similar principles apply to counting DNA sequences and protein arrangements.
                             </p>
                         </div>
 

@@ -984,19 +984,18 @@ const GroupTheory = () => {
 
               <div className="MiddleLagrange" >
                 <div className="LeftMiddleLagrange">
-                  <img className='leftImageLag' src="https://th.bing.com/th/id/R.709f3ad038acd24957a627c778305974?rik=u3d2LlZiZJR9Iw&pid=ImgRaw&r=0" alt="" />
-                  <h1>Proof</h1>
+                  <img className='leftImageLag' src="https://i.postimg.cc/VvKmDz2Y/image.png" alt="" />
+                  {/* <h1>Proof</h1> */}
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Langnotes' d="M8 6H16M8 10H16M8 14H11M6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
-                <div className="RightMiddleLagrange">
+                {/* <div className="RightMiddleLagrange">
                   <img src="https://tse2.mm.bing.net/th/id/OIP.5eQEu2HQNvQV41PGTaY2uAHaKz?w=1096&h=1599&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" />
-                  <h1>Numerical</h1>
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Langpencil' d="M15 6L18 9M17.4029 3.61716L3.9933 17.0268L3 21L6.97322 20.0067L20.3828 6.59708C21.2057 5.7742 21.2057 4.44004 20.3828 3.61716C19.56 2.79428 18.2258 2.79428 17.4029 3.61716Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
-                </div>
+                </div> */}
               </div>
 
               <div className="FooterLagrange" ref={isoRef}>
@@ -1028,19 +1027,19 @@ const GroupTheory = () => {
 
               <div className="MiddleIsomorphism">
                 <div className="LeftMiddleIsomorphism">
-                  <img src="https://th.bing.com/th/id/R.709f3ad038acd24957a627c778305974?rik=u3d2LlZiZJR9Iw&pid=ImgRaw&r=0" alt="" />
-                  <h1>Numerical One</h1>
+                  <img src="https://i.postimg.cc/D0LYw6dN/image.png" alt="" />
+                  {/* <h1>Numerical One</h1> */}
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Isonotes' d="M8 6H16M8 10H16M8 14H11M6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
-                <div className="RightMiddleIsomorphism">
+                {/* <div className="RightMiddleIsomorphism">
                   <img src="https://tse2.mm.bing.net/th/id/OIP.5eQEu2HQNvQV41PGTaY2uAHaKz?w=1096&h=1599&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" />
                   <h1>Numerical Two</h1>
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Isopencil' d="M15 6L18 9M17.4029 3.61716L3.9933 17.0268L3 21L6.97322 20.0067L20.3828 6.59708C21.2057 5.7742 21.2057 4.44004 20.3828 3.61716C19.56 2.79428 18.2258 2.79428 17.4029 3.61716Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
-                </div>
+                </div> */}
               </div>
 
 
@@ -1074,15 +1073,15 @@ const GroupTheory = () => {
 
               <div className="MiddleHomomorphism">
                 <div className="LeftMiddleHomomorphism">
-                  <img src="https://th.bing.com/th/id/R.709f3ad038acd24957a627c778305974?rik=u3d2LlZiZJR9Iw&pid=ImgRaw&r=0" alt="" />
-                  <h1>Numerical One</h1>
+                  <img src="https://i.postimg.cc/bvM1fKd2/image.png" alt="" />
+                  {/* <h1>Numerical One</h1> */}
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Homnotes' d="M8 6H16M8 10H16M8 14H11M6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
                 <div className="RightMiddleHomorphism">
-                  <img src="https://tse2.mm.bing.net/th/id/OIP.5eQEu2HQNvQV41PGTaY2uAHaKz?w=1096&h=1599&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" />
-                  <h1>Numerical Two</h1>
+                  <img src="https://i.postimg.cc/tT2D6rgb/image.png" alt="" />
+                  {/* <h1>Numerical Two</h1> */}
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Hompencil' d="M15 6L18 9M17.4029 3.61716L3.9933 17.0268L3 21L6.97322 20.0067L20.3828 6.59708C21.2057 5.7742 21.2057 4.44004 20.3828 3.61716C19.56 2.79428 18.2258 2.79428 17.4029 3.61716Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
@@ -1128,10 +1127,10 @@ const GroupTheory = () => {
               <div className="MiddleAutomorphism">
                 <div className="LeftMiddleAutomorphism">
                   <img
-                    src="https://th.bing.com/th/id/R.709f3ad038acd24957a627c778305974?rik=u3d2LlZiZJR9Iw&pid=ImgRaw&r=0"
+                    src="https://i.postimg.cc/RqrPCWFf/image.png"
                     alt=""
                   />
-                  <h1>Numerical One</h1>
+                  {/* <h1>Numerical One</h1> */}
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       className='Autnotes'
@@ -1146,10 +1145,10 @@ const GroupTheory = () => {
 
                 <div className="RightMiddleAutomorphism">
                   <img
-                    src="https://tse2.mm.bing.net/th/id/OIP.5eQEu2HQNvQV41PGTaY2uAHaKz?w=1096&h=1599&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    src="https://i.postimg.cc/fRvhFN27/image.png"
                     alt=""
                   />
-                  <h1>Numerical Two</h1>
+                  {/* <h1>Numerical Two</h1> */}
                   <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       className='Autpencil'
