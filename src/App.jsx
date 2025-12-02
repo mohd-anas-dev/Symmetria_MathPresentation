@@ -22,7 +22,7 @@ const App = () => {
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 5,
+      smooth: 2,
       effects: true,
       smoothTouch: 0.1,
     })
@@ -40,7 +40,7 @@ const App = () => {
   }, [myLocation.pathname])
   return (
     <>
-      <div id="smooth-wrapper">
+      <div id="smooth-wrapper" className='all'>
         <div id="smooth-content">
           <AnimatePresence mode='wait' location={myLocation} key={myLocation.pathname}>
             <Routes>

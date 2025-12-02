@@ -52,6 +52,39 @@ const GroupTheory = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger)
 
+
+    ScrollTrigger.create({
+      trigger: ".Isomorphism",
+      start: "top 60%",
+      end: "bottom 90%",
+      // markers: true,
+      scrub: true,
+      // pin: true
+    }, gsap.to(".Isomorphism", {
+      borderRadius: "60px",
+    }))
+
+        ScrollTrigger.create({
+      trigger: ".Homomorphism",
+      start: "top 60%",
+      end: "bottom 90%",
+      // markers: true,
+      scrub: true,
+      // pin: true
+    }, gsap.to(".Homomorphism", {
+      borderRadius: "60px",
+    }))
+
+        ScrollTrigger.create({
+      trigger: ".Automorphism",
+      start: "top 60%",
+      end: "bottom 90%",
+      // markers: true,
+      scrub: true,
+      // pin: true
+    }, gsap.to(".Automorphism", {
+      borderRadius: "60px",
+    }))
     ScrollTrigger.create({
       trigger: isoRef.current,
       start: "top top",
@@ -62,7 +95,7 @@ const GroupTheory = () => {
       scrub: 1,
     }, gsap.to(isoRef.current, {
       filter: "blur(10px)",
-      ease: "power3.inOut"
+      ease: "power3.inOut",
     }))
     ScrollTrigger.create({
       trigger: homoRef.current,
@@ -160,6 +193,26 @@ const GroupTheory = () => {
   })
 
   //* SVG Scroll Animation -- Lagrange Proof & Numerical
+//   useGSAP(() => {
+//   gsap.fromTo(".leftImageLag",
+//     {
+//       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+//     },
+//     {
+//       clipPath: "polygon(4% 2%, 11% 21%, 7% 41%, 8% 53%, 15% 66%, 7% 73%, 9% 90%, 25% 92%, 44% 90%, 65% 90%, 67% 93%, 82% 92%, 95% 83%, 94% 65%, 95% 52%, 89% 41%, 97% 32%, 92% 17%, 92% 5%, 64% 5%, 42% 6%, 19% 6%)",
+//       scrollTrigger: {
+//         trigger: ".leftImageLag",
+//         start: "top 60%",
+//         end: "bottom 70%",
+//         scrub: true,
+//         markers: true
+//       },
+//       ease: "power1.inOut",
+//       duration: 1.5
+//     }
+//   )
+// })
+
   useGSAP(() => {
     gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger)
     gsap.set(".Langnotes", {
@@ -986,9 +1039,9 @@ const GroupTheory = () => {
                 <div className="LeftMiddleLagrange">
                   <img className='leftImageLag' src="https://i.postimg.cc/VvKmDz2Y/image.png" alt="" />
                   {/* <h1>Proof</h1> */}
-                  <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Langnotes' d="M8 6H16M8 10H16M8 14H11M6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
+                  </svg> */}
                 </div>
                 {/* <div className="RightMiddleLagrange">
                   <img src="https://tse2.mm.bing.net/th/id/OIP.5eQEu2HQNvQV41PGTaY2uAHaKz?w=1096&h=1599&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" />
