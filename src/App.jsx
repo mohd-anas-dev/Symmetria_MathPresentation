@@ -59,8 +59,8 @@ const App = () => {
   )
 }
 
-// const WrappedApp = Transitions(App)
-export default App
+const WrappedApp = Transitions(App)
+export default WrappedApp
 
 
 
