@@ -1,6 +1,7 @@
 import React from 'react'
 import "../WebPageStyling/GroupTheory.css"
 import NavBar from "../Components/NavBar.jsx"
+import LangFinal from "../Components/LangFinal.jpeg"
 import { useRef, useEffect } from 'react'
 // import Transitions from "../Components/Transitions.jsx"
 import TopTransitions from "../Components/TopTransitions.jsx"
@@ -1037,7 +1038,7 @@ const GroupTheory = () => {
 
               <div className="MiddleLagrange" >
                 <div className="LeftMiddleLagrange">
-                  <img className='leftImageLag' src="https://i.postimg.cc/VvKmDz2Y/image.png" alt="" />
+                  <img className='leftImageLag' src={LangFinal} alt="" />
                   {/* <h1>Proof</h1> */}
                   {/* <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className='Langnotes' d="M8 6H16M8 10H16M8 14H11M6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke="#000000" stroke-width="0.50" stroke-linecap="round" stroke-linejoin="round"></path>
